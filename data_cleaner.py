@@ -10,7 +10,7 @@ import pandas
 # (1): Utility function to clean emojis/invalid chars
 def clean_unicode(text):
     cleaned = re.sub(emoji.get_emoji_regexp(), r"", text)
-    cleaned = re.sub(r"[^a-zA-Z0-9]+", ' ', cleaned)
+    cleaned = re.sub(r"[^a-zA-Z0-9@$# ]+", ' ', cleaned)
     return cleaned
 
 # MetaPy Data Cleaning
@@ -35,8 +35,12 @@ def read_raw_tweets_from_file(input_fname):
 def filter_tweets(df):
     df['tweet'] = ''
     for i, row in df.iterrows():
+        # remove numbers and other special characters
+        rawtweet = row['rawtweet']
+        rawtweet = re.sub(r'[^A-Za-z@$# ]+', '', rawtweet)
+        # metapy
         doc = metapy.index.Document()
-        doc.content(row['rawtweet'])
+        doc.content(rawtweet)
         tok = metapy.analyzers.ICUTokenizer(suppress_tags=True)
         tok = metapy.analyzers.LowercaseFilter(tok)
         tok = metapy.analyzers.LengthFilter(tok, min=2, max=10)
@@ -54,11 +58,13 @@ def filter_tweets(df):
 if __name__ == '__main__':
 
     #### parameters
-    input_file = './data/RealTime2.csv'
-    output_file = input_file.split('.csv')[0] + '.pkl'
+    params = pandas.read_pickle('./data/params.pkl')
+    input_data_file = params['input_data_file']
+    #input_file = './data/RealTime2.csv'
+    output_file = input_data_file.split('.csv')[0] + '.pkl'
     
     #### read tweets from file, remove emojis; store in rawtweet column
-    df = read_raw_tweets_from_file(input_file)
+    df = read_raw_tweets_from_file(input_data_file)
     
     #### tokenize, lowercase, lengthfilter, Porter filter, remove stopwords in rawtweet; store in tweet column
     df = filter_tweets(df)
