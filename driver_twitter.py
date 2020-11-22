@@ -20,6 +20,10 @@ if __name__ == '__main__':
     # call ngram_analyzer
     print('analyzing ngram frequencies')
     exec(open('./ngram_analyzer.py').read())
+
+    # aggregate sentiment calculator
+    print('analyzing aggregate sentiments')
+    exec(open('./aggregate_sentiment_analyzer.py').read())
     
     # done
     print('done')

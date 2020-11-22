@@ -9,8 +9,7 @@ import plotly.graph_objects as go
 import textblob
 import numpy
 
-def compute_interval_sentiment(df, intervals):
-    
+def compute_sentiment(df):
     df['polarity'] = 0
     df['subjectivity'] = 0
     for i, row in df.iterrows():
@@ -18,7 +17,10 @@ def compute_interval_sentiment(df, intervals):
         subjectivity= textblob.TextBlob(row.tweet).polarity
         df.loc[i, 'polarity'] = polarity
         df.loc[i, 'subjectivity'] = subjectivity
-        
+    return(df)
+    
+
+def compute_interval_sentiment(df, intervals):
     out = []    
     for interval in intervals:
         x = df[(df.tstamp > interval.left) & (df.tstamp <= interval.right)]
@@ -77,6 +79,9 @@ if __name__ == '__main__':
     intervals = pandas.interval_range(st_time, en_time, freq=f'{interval_length_secs}S')    
     
     #### net polarity every 5 minutes
+    df = compute_sentiment(df)
+    sentiment_outfile = input_data_file.split('.csv')[0] + '_sentiment.pkl'
+    df.to_pickle(sentiment_outfile, compression='zip')
     out = compute_interval_sentiment(df, intervals)
     plot_aggregate_sentiment_time_series_variation(out, save_figs_dir)
 
