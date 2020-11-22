@@ -9,7 +9,7 @@ if __name__ == '__main__':
     #### parameters
     print('saving parameter file')
     params = {}
-    params['input_data_file'] = './data/RealTime.csv'
+    params['input_data_file'] = './data/RealTime2.csv'
     params['save_figs_dir'] = './figures/html/'
     pandas.to_pickle(params, './data/params.pkl') # we always read from here; don't change!!
 
