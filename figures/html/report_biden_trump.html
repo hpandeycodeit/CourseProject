@@ -1,0 +1,79 @@
+<html>
+<head>
+<link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+<div class="sidenav">
+  <a href="#2gram_analysis">Twitter / 2-gram analysis</a>
+  <a href="#3gram_analysis">Twitter / 3-gram analysis</a>
+  <a href="#4gram_analysis">Twitter / 4-gram analysis</a>
+  <a href="#5gram_analysis">Twitter / 5-gram analysis</a>
+  <a href="#polarity_analysis">Biden-Trump Polarity analysis</a>
+</div>
+
+<!-- Page content -->
+<div class="main">
+
+
+    <p style="margin-top:0.5cm;"> <h2> Twitter sentiment analysis</h4> </p>
+    
+    <hr>
+    
+    <p> <h4> Analysis of topics and trends on Nov 4, 2020, the morning after the US election. </h4> </p>
+    <p> Trends of various n-gram frequencies during the data collection period are plotted here. For each trailing 5 minute time-period, we compute the frequencies of all possible n-grams. From this list, we plot the largest 20 n-grams. </p>
+    
+    <p> While identifying the trends, the top-20 can be computed from any point in time. Since we are doing a retrospective analysis here, the top-20 list was derived from the final time.   </p>
+
+    <hr>
+    
+    <div class="row">
+
+        <!-- 2gram analysis -->
+        <h5> Bi-gram frequency trends </h5>
+        <a id="2gram_analysis"> </a>
+        <div class="column">
+            <iframe width="100%" height="400" style="border:none;" src="current-top20-2gram.html" align="left"></iframe>
+        </div>
+
+        <!-- 3gram analysis -->
+        <h5> Tri-gram frequency trends </h5>
+        <a id="3gram_analysis"> </a>
+        <div class="column">
+            <iframe width="100%" height="400" style="border:none;" src="current-top20-3gram.html" align="left"></iframe>
+        </div>
+    
+        <!-- 4gram analysis -->
+        <h5> 4-gram frequency trends </h5>
+        <a id="4gram_analysis"> </a>
+        <div class="column">
+            <iframe width="100%" height="400" style="border:none;" src="current-top20-4gram.html" align="left"></iframe>
+        </div>
+
+        <!-- 5gram analysis -->
+        <h5> 5-gram frequency trends </h5>
+        <a id="5gram_analysis"> </a>
+        <div class="column">
+            <iframe width="100%" height="400" style="border:none;" src="current-top20-5gram.html" align="left"></iframe>
+        </div>
+
+        <!-- Sentiment analysis -->
+        <h5> Sentiment analysis : Polarity </h5>
+        <a id="polarity_analysis"> </a>
+        <div class="column">
+            <iframe width="100%" height="400" style="border:none;" src="biden_trump_polarity.html" align="left"></iframe>
+        </div>
+        
+        <div class="column">
+            <iframe width="100%" height="400" style="border:none;" src="biden_trump_weighted_polarity.html" align="left"></iframe>
+        </div>
+    
+    </div>
+
+</div>
+
+</body>
+
+</html>
