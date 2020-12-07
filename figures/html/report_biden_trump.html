@@ -13,6 +13,7 @@
   <a href="#4gram_analysis">Twitter / 4-gram analysis</a>
   <a href="#5gram_analysis">Twitter / 5-gram analysis</a>
   <a href="#polarity_analysis">Biden-Trump Polarity analysis</a>
+  <a href="#plsa_analysis">PLSA analysis</a>
 </div>
 
 <!-- Page content -->
@@ -23,54 +24,72 @@
     
     <hr>
     
-    <p> <h4> Analysis of topics and trends on Nov 4, 2020, the morning after the US election. </h4> </p>
+    <p> <h4> Analysis of topics and topic-trends on Nov 4, 2020, the morning after the US election. </h4> </p>
     <p> Trends of various n-gram frequencies during the data collection period are plotted here. For each trailing 5 minute time-period, we compute the frequencies of all possible n-grams. From this list, we plot the largest 20 n-grams. </p>
     
-    <p> While identifying the trends, the top-20 can be computed from any point in time. Since we are doing a retrospective analysis here, the top-20 list was derived from the final time.   </p>
+    <p> While identifying the trends, the top-20 can be computed from any point in time. Since we are doing a retrospective analysis here, the top-20 list was derived from the final time. </p>
+    
+    <p> The key result here is that our sentiment analysis captures the trend where twitter sentiment appears to shift towards a Biden victory from a Trump vistory as seen in the last two figures here </p>
 
     <hr>
     
     <div class="row">
 
         <!-- 2gram analysis -->
-        <h5> Bi-gram frequency trends </h5>
         <a id="2gram_analysis"> </a>
+        <h5> Bi-gram frequency trends </h5>
         <div class="column">
-            <iframe width="100%" height="400" style="border:none;" src="current-top20-2gram.html" align="left"></iframe>
+            <iframe width="100%" height="600" style="border:none;" src="current-top20-2gram.html" align="left"></iframe>
         </div>
 
         <!-- 3gram analysis -->
+        <a id="3gram_analysis"> </a>        
         <h5> Tri-gram frequency trends </h5>
-        <a id="3gram_analysis"> </a>
         <div class="column">
-            <iframe width="100%" height="400" style="border:none;" src="current-top20-3gram.html" align="left"></iframe>
+            <iframe width="100%" height="600" style="border:none;" src="current-top20-3gram.html" align="left"></iframe>
         </div>
     
         <!-- 4gram analysis -->
-        <h5> 4-gram frequency trends </h5>
         <a id="4gram_analysis"> </a>
+        <h5> 4-gram frequency trends </h5>
         <div class="column">
-            <iframe width="100%" height="400" style="border:none;" src="current-top20-4gram.html" align="left"></iframe>
+            <iframe width="100%" height="600" style="border:none;" src="current-top20-4gram.html" align="left"></iframe>
         </div>
 
         <!-- 5gram analysis -->
+        <a id="5gram_analysis"> </a>        
         <h5> 5-gram frequency trends </h5>
-        <a id="5gram_analysis"> </a>
         <div class="column">
-            <iframe width="100%" height="400" style="border:none;" src="current-top20-5gram.html" align="left"></iframe>
+            <iframe width="100%" height="600" style="border:none;" src="current-top20-5gram.html" align="left"></iframe>
         </div>
 
         <!-- Sentiment analysis -->
+        <a id="polarity_analysis"> </a>        
         <h5> Sentiment analysis : Polarity </h5>
-        <a id="polarity_analysis"> </a>
         <div class="column">
-            <iframe width="100%" height="400" style="border:none;" src="biden_trump_polarity.html" align="left"></iframe>
+            <iframe width="100%" height="600" style="border:none;" src="biden_trump_polarity.html" align="left"></iframe>
         </div>
         
         <div class="column">
-            <iframe width="100%" height="400" style="border:none;" src="biden_trump_weighted_polarity.html" align="left"></iframe>
+            <iframe width="100%" height="600" style="border:none;" src="biden_trump_weighted_polarity.html" align="left"></iframe>
         </div>
-    
+
+        <!-- PLSA analysis -->
+        <a id="plsa_analysis"> </a>        
+        <h5> Probabilistic Latent Semantic Analysis</h5>
+        <p> The top 10 topic distributions identified using PLSA are shown below. 
+
+        <br><br> We can see immediately that various words associated with the election like "premature", "claim", "stop counts", etc, are identified. In addition, key states like Pennsylvania, Georgia, and Wisconsin are also idenfified. 
+ 
+        <br><br> The importance distributions and KL convergence plots by iteration (solution was computed using an EM algorithm) are also shown in the figure below. </p>
+
+        <div class="column">
+            <img width="33%" style="border:10px;" src="plsa_wordcloud.jpeg">
+            <img width="33%" style="border:10px;" src="plsa_topicdistribution.jpeg">
+            <img width="33%" style="border:10px;" src="plsa_KL_divergence.jpeg">
+        </div>
+
+            
     </div>
 
 </div>
