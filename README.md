@@ -7,15 +7,15 @@ the sentiments of the users on the Presidential Campaign.
 
 ## DATA Collection
 
-Data was collected using the Twitter API and python code. The code from the file () was run during the Presedential Election Night 2020 to collect the most relevant tweets and which covered the hashtags such as 'Elections2020', 'ElectionNight', 'Elections', 'Trump', 'Biden'. It roughly collected around 650K tweets
+Data was collected using the Twitter API and python code. The code "twitter_data.py" was run during the Presedential Election Night 2020 to collect the most relevant tweets and which covered the hashtags such as 'Elections2020', 'ElectionNight', 'Elections', 'Trump', 'Biden'. It roughly collected around 650K tweets
 
-## Data Cleaning #TODO
+## Data Cleaning 
 
 We used metapy to cleanup the data. We used the MeTA analysis toolkit to clean the raw data that was scraped from
 Twitter. This involved using ‘stemming’ to treat base words as the same, in order
 to reduce the amount of noise in the analysis.
 
-## DATA Processing #TODO
+## DATA Processing 
 
 Current data is analyzed to create time-series of n-gram counts charts are plotted
 and embedded into html files. These Plots contain the top-20 most popular ngrams.
