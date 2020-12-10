@@ -1,6 +1,4 @@
-# CourseProject
-
-# About the project
+## About the project
 
 This project is about capturing sentiments on the data. The data that was used in this project was streamed through Twitter and mainly focued on the tweets during the Presidential Election 2020. 
 Streaming the social media data like Twitter, gave us a dataset on the topic “Presidential Campaign” and then we processed the data to find and evaluate
@@ -11,17 +9,17 @@ the sentiments of the users on the Presidential Campaign.
 - Python
 - Twitter API
 
-# DATA Collection
+## DATA Collection
 
 Data was collected using the Twitter API and python code. The code from the file () was run during the Presedential Election Night 2020 to collect the most relevant tweets and which covered the hashtags such as 'Elections2020', 'ElectionNight', 'Elections', 'Trump', 'Biden'. It roughly collected around 650K tweets
 
-# Data Cleaning #TODO
+## Data Cleaning #TODO
 
 We used metapy to cleanup the data. We used the MeTA analysis toolkit to clean the raw data that was scraped from
 Twitter. This involved using ‘stemming’ to treat base words as the same, in order
 to reduce the amount of noise in the analysis.
 
-# DATA Processing #TODO
+## DATA Processing #TODO
 
 Current data is analyzed to create time-series of n-gram counts charts are plotted
 and embedded into html files. These Plots contain the top-20 most popular ngrams.
@@ -43,4 +41,8 @@ Clone the project and follow the steps below:
   5. Stores the charts/graphs in "./figures/html/" directory
   
   
+ ## Team
  
+ [Amrutha](@amrutha97)
+ [Bala](@balaksuiuc)
+ [Himanshu](@hpandeycodeit)
