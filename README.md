@@ -4,11 +4,6 @@ This project is about capturing sentiments on the data. The data that was used i
 Streaming the social media data like Twitter, gave us a dataset on the topic “Presidential Campaign” and then we processed the data to find and evaluate
 the sentiments of the users on the Presidential Campaign.
 
-# TOOLs/Languages
-
-- Python
-- Twitter API
-
 ## DATA Collection
 
 Data was collected using the Twitter API and python code. The code from the file () was run during the Presedential Election Night 2020 to collect the most relevant tweets and which covered the hashtags such as 'Elections2020', 'ElectionNight', 'Elections', 'Trump', 'Biden'. It roughly collected around 650K tweets
@@ -39,10 +34,15 @@ Clone the project and follow the steps below:
   3. After, cleaning runs "ngram_analyzer.py" to analyze ngram frequencies
   4. Calculates the sentiments by running "aggregate_sentiment_analyzer.py" 
   5. Stores the charts/graphs in "./figures/html/" directory
-  
+ 
+## TOOLs/Languages
+
+- Python
+- Twitter API
+
   
  ## Team
  
- [Amrutha](@amrutha97)
- [Bala](@balaksuiuc)
- [Himanshu](@hpandeycodeit)
+ [Amrutha](amrutha97)
+ [Bala](balaksuiuc)
+ [Himanshu](hpandeycodeit)
