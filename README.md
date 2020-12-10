@@ -1,3 +1,4 @@
+
 ## About the project
 
 This project is about capturing sentiments on the data. The data that was used in this project was streamed through Twitter and mainly focued on the tweets during the Presidential Election 2020. 
@@ -43,6 +44,6 @@ Clone the project and follow the steps below:
   
  ## Team
  
- [Amrutha](amrutha97)
- [Bala](balaksuiuc)
- [Himanshu](hpandeycodeit)
+ [Amrutha](#https://github.com/amrutha97)
+ [Bala](#https://github.com/balaksuiuc)
+ [Himanshu](#https://github.com/hpandeycodeit)
