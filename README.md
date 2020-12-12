@@ -1,7 +1,7 @@
 
 ## About the project
 
-This project provides a general framwork for capturing sentiment trends from streamed twitter data. We demonstrate our software by capturing the US 2020 election related tweets and applying n-gram frequency trends, and PLSA. The framework is written to be such that it is easy to add new modules. 
+This project provides a general framework for capturing sentiment trends from streamed twitter data. We demonstrate our software by capturing the US 2020 election related tweets, in the morning after the election, and applying n-gram frequency trends, and PLSA. The framework is written to be such that it is easy to add new modules, and perform new analytics. 
 
 Using this dataset, we show that n-gram analysis captures many of the prominent characteristics of the election -- including "biden win", "claim victory", and "trump premature claim". We then apply a sentiment analysis, and show that the positive sentiment towards trump decreases between 840-1000 AM, while biden's positive sentiment marginally increases. Finally, we do a PLSA analysis on the data to identify the top-10 topics that are of the greatest importance. We show that the PLSA analysis captures biden's win in georgia, importance of swing states pennsylvania, and wisconsin, and vote count stop related messages. Interestingly, the top topic turned out to be "claims of a premature result".
 
