@@ -1,9 +1,11 @@
 
 ## About the project
 
-This project is about capturing sentiments on the data. The data that was used in this project was streamed through Twitter and mainly focued on the tweets during the Presidential Election 2020. 
-Streaming the social media data like Twitter, gave us a dataset on the topic “Presidential Campaign” and then we processed the data to find and evaluate
-the sentiments of the users on the Presidential Campaign.
+This project provides a general framwork for capturing sentiment trends from streamed twitter data. We demonstrate our software by capturing the US 2020 election related tweets and applying n-gram frequency trends, and PLSA. The framework is written to be such that it is easy to add new modules. 
+
+Using this dataset, we show that n-gram analysis captures many of the prominent characteristics of the election -- including "biden win", "claim victory", and "trump premature claim". We then apply a sentiment analysis, and show that the positive sentiment towards trump decreases between 840-1000 AM, while biden's positive sentiment marginally increases. Finally, we do a PLSA analysis on the data to identify the top-10 topics that are of the greatest importance. We show that the PLSA analysis captures biden's win in georgia, importance of swing states pennsylvania, and wisconsin, and vote count stop related messages. Interestingly, the top topic turned out to be "claims of a premature result".
+
+This package can be used as a template for processing any other twitter data stream. 
 
 ## DATA Collection
 
@@ -11,16 +13,11 @@ Data was collected using the Twitter API and python code. The code "twitter_data
 
 ## Data Cleaning 
 
-We used metapy to cleanup the data. We used the MeTA analysis toolkit to clean the raw data that was scraped from
-Twitter. This involved using ‘stemming’ to treat base words as the same, in order
-to reduce the amount of noise in the analysis.
+We used metapy to cleanup the data. We used the MeTA analysis toolkit to clean the raw data that was scraped from Twitter. This involved using ‘stemming’ to treat base words as the same, in order to reduce the amount of noise in the analysis. One important aspect of this work is the necessity to remove "emojis". These contaminate the data, and create biases in the results. So, we removed any emojis with the text. 
 
-## DATA Processing 
+## DATA Analysis
 
-Current data is analyzed to create time-series of n-gram counts charts are plotted
-and embedded into html files. These Plots contain the top-20 most popular ngrams.
-We have computed for 2,3,4 and 5-grams. As per the proposal we have
-created the initial Sentiment Analysis for Presidential Elections 2020.
+Current data is analyzed to create time-series of n-gram counts at 5 minute intervals. Clickable/zoomable charts are automatically generated, and embedded into html files. These Plots contain the top-20 most popular n-grams (for n=2,3,4,5). As per the proposal we have created the sentiment trend analysis results for the US presidential elections in 2020. Finally, PLSA analysis picks up the most salient topics. 
 
 
 ## Run the project
