@@ -2,3 +2,4 @@ metapy
 emoji
 pandas
 plotly
+textblob
