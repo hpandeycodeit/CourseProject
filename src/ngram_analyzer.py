@@ -72,7 +72,7 @@ def plot_ngram_time_series_variation(out, save_figs_dir, ngram_length, number_to
         x = out[out.tokens == token]
         fig.add_trace(go.Scatter(x = x.en_time, y = x.counts, name=', '.join(token)))
     
-    fig.write_html(f'{save_figs_dir}/beginning-top20-{ngram_length}gram.html')
+    fig.write_html('{save_figs_dir}/beginning-top20-{ngram_length}gram.html')
     return()
 
 
@@ -82,7 +82,7 @@ def plot_ngram_time_series_variation(out, save_figs_dir, ngram_length, number_to
 if __name__ == '__main__':
 
     #### read parameters
-    params = pandas.read_pickle('./data/params.pkl')
+    params = pandas.read_pickle('../data/params.pkl')
     input_data_file = params['input_data_file']
     save_figs_dir = params['save_figs_dir']
     
@@ -91,10 +91,10 @@ if __name__ == '__main__':
     df = pandas.read_pickle(input_processed_file, compression='zip')
     
     #### calculate intervals for analysis
-    interval_length_secs = 300
+    interval_length_secs = '300S'
     st_time = df.tstamp.min()
     en_time = df.tstamp.max()
-    intervals = pandas.interval_range(st_time, en_time, freq=f'{interval_length_secs}S')    
+    intervals = pandas.interval_range(st_time, en_time, freq='300S')    
     
     #### ngrammize tweets and count ngrams every 5 minutes
     #### here we plot 2-gram, 3-gram, 4-gram and 5-grams

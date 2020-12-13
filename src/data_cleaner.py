@@ -45,7 +45,7 @@ def filter_tweets(df):
         tok = metapy.analyzers.LowercaseFilter(tok)
         tok = metapy.analyzers.LengthFilter(tok, min=2, max=30)
         tok = metapy.analyzers.Porter2Filter(tok)
-        tok = metapy.analyzers.ListFilter(tok, "lemur-stopwords.txt", metapy.analyzers.ListFilter.Type.Reject)
+        tok = metapy.analyzers.ListFilter(tok, "../lemur-stopwords.txt", metapy.analyzers.ListFilter.Type.Reject)
         tok.set_content(doc.content())
         df.loc[i, 'tweet'] = ' '.join(tok)
     return(df)
@@ -58,7 +58,7 @@ def filter_tweets(df):
 if __name__ == '__main__':
 
     #### parameters
-    params = pandas.read_pickle('./data/params.pkl')
+    params = pandas.read_pickle('../data/params.pkl')
     input_data_file = params['input_data_file']
     #input_file = './data/RealTime2.csv'
     output_file = input_data_file.split('.csv')[0] + '.pkl'

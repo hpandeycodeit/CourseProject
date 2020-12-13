@@ -64,7 +64,7 @@ def plot_aggregate_sentiment_time_series_variation(out, save_figs_dir):
 if __name__ == '__main__':
 
     #### read parameters
-    params = pandas.read_pickle('./data/params.pkl')
+    params = pandas.read_pickle('../data/params.pkl')
     input_data_file = params['input_data_file']
     save_figs_dir = params['save_figs_dir']
     
