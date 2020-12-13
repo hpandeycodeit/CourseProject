@@ -72,7 +72,7 @@ def plot_ngram_time_series_variation(out, save_figs_dir, ngram_length, number_to
         x = out[out.tokens == token]
         fig.add_trace(go.Scatter(x = x.en_time, y = x.counts, name=', '.join(token)))
     
-    fig.write_html('{save_figs_dir}/beginning-top20-{ngram_length}gram.html')
+    fig.write_html(f'{save_figs_dir}/beginning-top20-{ngram_length}gram.html')
     return()
 
 
