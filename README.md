@@ -22,9 +22,11 @@ Current data is analyzed to create time-series of n-gram counts at 5 minute inte
 
 ## Requirements
 
-- pip install metapy
-- pip install emoji
-- pip install pandas
+Check our requirements file for the required libraries and run pip install requirements.txt. Following are the required libraries for this project. 
+
+- metapy
+- emoji
+- pandas
 
 ## Run the project
 
