@@ -20,6 +20,12 @@ We used metapy to cleanup the data. We used the MeTA analysis toolkit to clean t
 Current data is analyzed to create time-series of n-gram counts at 5 minute intervals. Clickable/zoomable charts are automatically generated, and embedded into html files. These Plots contain the top-20 most popular n-grams (for n=2,3,4,5). As per the proposal we have created the sentiment trend analysis results for the US presidential elections in 2020. Finally, PLSA analysis picks up the most salient topics. 
 
 
+## Requirements
+
+- pip install metapy
+- pip install emoji
+- pip install pandas
+
 ## Run the project
 
 Clone the project and follow the steps below: 
