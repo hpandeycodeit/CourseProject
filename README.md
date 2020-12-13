@@ -27,6 +27,7 @@ Check our requirements file for the required libraries and run pip install requi
 - metapy
 - emoji
 - pandas
+- plotly
 
 ## Run the project
 
