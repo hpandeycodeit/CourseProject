@@ -1,3 +1,4 @@
 metapy
 emoji
 pandas
+plotly
