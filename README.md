@@ -28,6 +28,7 @@ Check our requirements file for the required libraries and run pip install requi
 - emoji
 - pandas
 - plotly
+- textblob
 
 ## Run the project
 
