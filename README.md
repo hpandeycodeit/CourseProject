@@ -9,11 +9,11 @@ This package can be used as a template for processing any other twitter data str
 
 ## DATA Collection
 
-Data was collected using the Twitter API and python code. The code "twitter_data.py" was run during the Presedential Election Night 2020 to collect the most relevant tweets and which covered the hashtags such as 'Elections2020', 'ElectionNight', 'Elections', 'Trump', 'Biden'. It roughly collected around 650K tweets
+Data was collected using the Twitter API and python code. The code "twitter_data.py" was run during the Presidential Election Night 2020 to collect the most relevant tweets that covered hashtags such as 'Elections2020', 'ElectionNight', 'Elections', 'Trump', 'Biden'. In all, we collected approximately 650K tweets.
 
 ## Data Cleaning 
 
-We used metapy to cleanup the data. We used the MeTA analysis toolkit to clean the raw data that was scraped from Twitter. This involved using ‘stemming’ to treat base words as the same, in order to reduce the amount of noise in the analysis. One important aspect of this work is the necessity to remove "emojis". These contaminate the data, and create biases in the results. So, we removed any emojis with the text. 
+We used metapy for initial clean up of the data. We used the MeTA analysis toolkit to clean the raw data that was scraped from Twitter. This involved using ‘stemming’ to treat base words as the same, in order to reduce the amount of noise in the analysis. One important aspect of this work is the necessity to remove "emojis". These contaminate the data, and create biases in the results. So, we removed any emojis with the text. 
 
 ## DATA Analysis
 
